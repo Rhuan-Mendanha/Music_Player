@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.lyrics.ovh; media-src 'self' blob:; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline';">
+  <title>The Cria Player</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Main container for all the app content -->
+  <div class="container">
+    
+    <!-- App title -->
+    <h1>═══ Criafy ═══</h1>
+    
+    <!-- Button to pick a music folder -->
+    <button id="select-folder">📁</button>
+
+    <!-- This shows info about the current song -->
+    <div id="track-info">
+      <span id="track-title">Track Title</span> - <span id="track-artist">Artist</span>
+    </div>
+
+    <!-- This is where the list of songs will be shown -->
+    <div id="track-list"></div>
+
+    <!-- Music player controls like next, play/pause, shuffle, repeat, theme toggle -->
+    <div class="controls">
+      <button id="previous-track">⏮</button>  <!-- Go to previous song -->
+      <button id="play-pause">⏯</button>      <!-- Play or pause the song -->
+      <button id="next-track">⏭</button>      <!-- Go to next song -->
+      <button id="shuffle">🔀</button>        <!-- Shuffle the playlist -->
+      <button id="repeat">🔁</button>         <!-- Repeat the current song or playlist -->
+      <button id="theme-toggle">🌙</button>   <!-- Switch between light and dark mode -->
+    </div>
+
+    <!-- This is the actual audio player -->
+    <audio id="player" controls></audio>
+
+    <!-- Music visualizer (like those moving bars in old music players) -->
+    <canvas id="visualizer" width="300" height="100"></canvas>
+
+    <!-- Buttons to adjust the equalizer settings (sound tone control) -->
+    <div id="equalizer">
+      <button id="eq-bass">Bass</button>     <!-- More deep sounds -->
+      <button id="eq-boom">Boom</button>     <!-- More punch or beat -->
+      <button id="eq-treble">Treble</button> <!-- More high-pitched sounds -->
+    </div>
+  </div>
+
+  <!-- This script controls the behavior of the app (written in JavaScript) -->
+  <script src="renderer.js"></script>
+</body>
+</html>

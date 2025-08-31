@@ -1,0 +1,190 @@
+/* General styles */
+body {
+    font-family: "Fira Code, Consolas,  monospace"; /* Monospaced font for a techy look */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex; /* Centering layout */
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s; /* Smooth theme transitions */
+}
+
+.container {
+    background-color: inherit; /* Matches current theme */
+    color: inherit;
+    border-radius: 12px;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+h1 {
+    margin-bottom: 15px;
+    font-size: 48px; /* Large title */
+}
+
+/* Buttons */
+button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 18px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #ccc;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+button:hover {
+    background-color: #bbb; /* Slight darkening on hover */
+}
+
+button.active {
+    border: 2px solid limegreen; /* Highlight active buttons */
+}
+
+/* Controls layout */
+.controls {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Wrap on small screens */
+    gap: 10px; /* Space between buttons */
+}
+
+/* Audio player */
+audio {
+    margin-top: 15px;
+    width: 100%; /* Full width of container */
+    border-radius: 10px;
+}
+
+/* Track list */
+#track-list {
+    margin: 15px 0;
+    max-height: 200px; /* Scroll if too tall */
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.track {
+    padding: 8px;
+    border-radius: 8px;
+    margin: 4px 0;
+    cursor: pointer;
+    background-color: #eee;
+    transition: background-color 0.3s;
+}
+
+.track:hover {
+    background-color: #ccc;
+}
+
+/* Track info */
+#track-info {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Theme: Light */
+body.light-theme {
+    background-color: #f8f8f8;
+    color: #222;
+}
+
+body.light-theme button {
+    background-color: #e0e0e0;
+    color: #222;
+}
+
+body.light-theme .track {
+    background-color: #f0f0f0;
+    color: #222;
+}
+
+body.light-theme .track:hover {
+    background-color: #ccc;
+}
+
+/* Theme: Dark */
+body.dark-theme {
+    background-color: #121212;
+    color: #eee;
+}
+
+body.dark-theme button {
+    background-color: #333;
+    color: #eee;
+}
+
+body.dark-theme button:hover {
+    background-color: #444;
+}
+
+body.dark-theme .track {
+    background-color: #1e1e1e;
+    color: #eee;
+}
+
+body.dark-theme .track:hover {
+    background-color: #333;
+}
+
+/* Visualizer */
+#visualizer {
+    margin-top: 15px;
+    border-radius: 12px;
+    width: 100%;
+    height: 100px;
+    background-color: transparent; /* Canvas will draw the visuals */
+}
+
+/* Equalizer */
+#equalizer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+#equalizer button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    min-width: 100px;
+    background-color: #ccc;
+    border: 2px solid transparent; /* Will show green border when active */
+    transition: all 0.3s ease;
+}
+
+#equalizer button:hover {
+    background-color: #bbb;
+}
+
+#equalizer button.active {
+    border-color: limegreen;
+}
+
+/* Dark theme for equalizer buttons */
+body.dark-theme #equalizer button {
+    background-color: #333;
+    color: #eee;
+}
+
+body.dark-theme #equalizer button:hover {
+    background-color: #444;
+}
+
+body.dark-theme #equalizer button.active {
+    border-color: limegreen;
+}

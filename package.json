@@ -1,0 +1,25 @@
+{
+  "name": "mymusicapp",
+  "version": "1.0.0",
+  "description": "Cross-platform music player built with Electron",
+  "main": "app/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^28.0.0"
+  },
+  "dependencies": {
+    "electron-store": "^9.0.0",
+    "id3js": "^2.1.1",
+    "music-metadata": "^7.14.0"
+  },
+  "build": {
+    "appId": "com.mymusicapp",
+    "asar": true,
+    "dmg": {
+      "background": "./assets/background.png",
+      "icon": "./assets/icon.icns"
+    }
+  }
+}
